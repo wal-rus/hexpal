@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<body>
+
+<canvas id="canvas" width="640" height="480" style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script id="2d-vertex-shader" type="x-shader/x-vertex">
+attribute vec2 a_position;
+
+void main() {
+  gl_Position = vec4(a_position, 0, 1);
+}
+</script>
+
+<script id="2d-fragment-shader" type="x-shader/x-fragment">
+void main() {
+  gl_FragColor = vec4(0,1,0,1);  // green
+}
+</script>
+
+<script type="text/javascript" src="scripts/webgl-util.js"></script>
+<script type="text/javascript" src="scripts/render.js"></script>
+
+</body>
+</html>
